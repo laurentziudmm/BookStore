@@ -1,1 +1,11 @@
-<mat-toolbar class="mat-primary"></mat-toolbar>
+<mat-toolbar class="mat-primary">
+	
+	<h3 [style.color] = "'white'">ADMIN PORTAL</h3>
+	<span class="example-spacer"></span>
+	<span [hidden] = "!loggedIn"><a mat-button>View Book List</a></span>
+	<span [hidden] = "!loggedIn"><a mat-button>Add a Book</a></span>
+	<span [hidden] = "!loggedIn"><a mat-button>LogOut</a></span>
+
+</mat-toolbar>
+
+<button mat-raised-button class = "mat-warn" (click) = "toggleDisplay()"> Toggle </button>

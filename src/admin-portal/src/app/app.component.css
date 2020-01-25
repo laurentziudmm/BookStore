@@ -1,16 +1,16 @@
 .companyName{
-    font-size: 150%;
+    font-size: 100%;
 }
 div {
     overflow: inherit;
 }
 a{
     text-decoration: none;
-    font-size: 110%;
+    font-size: 90%;
     white-space: normal;
 }
 button{
-    font-size: 110%;
+    font-size: 90%;
     min-width: min-content;
 }
 .example-icon {
@@ -21,6 +21,6 @@ button{
     flex: 1 1 auto;
   }
   .mat-sidenav-content{
-      font-size: 200%;
+      font-size: 100%;
       text-align: center;
   }
