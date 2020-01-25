@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  private credential = {'username' : '','password' : ''};
+  private loggedIn = false;
+
+  constructor( private loginService: LoginService) { }
+
+  onSubmit() {
+    this.loginService.sendCredential(this.credential.username, this.credential.password).subscribe(
+      res => {
+        console.log(res);
+        localStorage.set("xAuthToken", res.json().token);
+        this.loginService = true;
+        location.reload();
+      },
+      error => {
+        console.log(error);
+      }
+      
+
+    );
+  }
 
   ngOnInit() {
   }
