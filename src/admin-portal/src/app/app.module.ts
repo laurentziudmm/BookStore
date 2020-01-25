@@ -7,11 +7,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule, MatButtonModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
