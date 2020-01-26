@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
     this.loginService.sendCredential(this.credential.username, this.credential.password).subscribe(
       res => {
         console.log(res);
-        localStorage.set("xAuthToken", res.json().token);
-        this.loginService = true;
+        localStorage.setItem("xAuthToken", res.json().token);
+        this.loginService;
         location.reload();
       },
       error => {

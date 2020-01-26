@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http , Headers } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Http , Headers } from '@angular/common/http';
+// import { Observable } from 'rxjs/Observable';
 
-@Injectable({
+@Injectable ({
   providedIn: 'root'
 })
 export class LoginService {
@@ -16,9 +16,9 @@ export class LoginService {
   let basicHeader = "Basic " + encodedCredentials;
   let headers = new Headers ({
   		'Content-Type' : 'application/x-www-form-urlencoded',
-  		'Authorization' : basicHeader,
+  		'Authorization' : basicHeader
   });
 
   return this.http.get(url, {headers: headers});
-}
+  }
 }
