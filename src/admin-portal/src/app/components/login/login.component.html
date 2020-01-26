@@ -7,13 +7,13 @@
             <mat-grid-tile [attr.colspan] = "4">
                 <form (ngSubmit) = "onSubmit()">
                     <mat-form-field class = "full-width">
-                        <input type="text" matInput [[ngModel]]="credential.username" 
-                        name = "profile.username" id = 'username' placeholder={{"Your Username"}}>
+                        <input type="text" matInput [(ngModel)]= "credential.username" 
+                        name = "profile.username" id = 'username' placeholder="Username">
                     </mat-form-field>
-                    <!-- <mat-form-field class = "full-width">
-                        <input type="password" matInput[[ngModel]]="credential.password" 
-                        name = "profile.password" id = 'password' placeholder={{"Your Password"}}>
-                    </mat-form-field> -->
+                    <mat-form-field class = "full-width">
+                        <input type="password" matInput [(ngModel)]="credential.password" 
+                        name = "profile.password" id = 'password' placeholder="Password">
+                    </mat-form-field>
                     <button mat-raised-button type="submit" class="mat-primary">Login</button>
                 </form>
             </mat-grid-tile>
