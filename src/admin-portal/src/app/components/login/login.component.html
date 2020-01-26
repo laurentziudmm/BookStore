@@ -1,22 +1,22 @@
+<!-- <p>login it works</p> -->
 
 <div class="container">
-    <div <div hidden="loggedIn">
+    <div [hidden]="loggedIn">
         <mat-grid-list cols="6" [style.margin-top] = "'20px'">
-            <mat-grid-title [colspan] = "1"></mat-grid-title>
-            <mat-grid-title [colspan] = "4">
+            <mat-grid-tile [attr.colspan] = "1"></mat-grid-tile>
+            <mat-grid-tile [attr.colspan] = "4">
                 <form (ngSubmit) = "onSubmit()">
-                    <mat-input-container class = "full-width">
-                        <input type="text" matInput[(ngModel)] = "credential.username" 
-                        name = "username" id = 'username' placeholder="Your Username">
-                    </mat-input-container>
-                    <mat-input-container class = "full-width">
-                        <input type="password" matInput[(ngModel)] = "credential.password" 
-                        name = "password" id = 'password' placeholder="Your Password">
-                    </mat-input-container>
-                    <button mat-raised-button type="submit" class="mat-primary">             
-                    Login</button>
+                    <mat-form-field class = "full-width">
+                        <input type="text" matInput [[ngModel]]="credential.username" 
+                        name = "profile.username" id = 'username' placeholder={{"Your Username"}}>
+                    </mat-form-field>
+                    <!-- <mat-form-field class = "full-width">
+                        <input type="password" matInput[[ngModel]]="credential.password" 
+                        name = "profile.password" id = 'password' placeholder={{"Your Password"}}>
+                    </mat-form-field> -->
+                    <button mat-raised-button type="submit" class="mat-primary">Login</button>
                 </form>
-            </mat-grid-title>
+            </mat-grid-tile>
         </mat-grid-list>
     </div>
 </div>
