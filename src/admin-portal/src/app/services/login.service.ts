@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http , Headers } from '@angular/common/http';
+import { Http , Headers } from '@angular/http';
 // import { Observable } from 'rxjs/Observable';
 
-@Injectable ({
-  providedIn: 'root'
-})
+@Injectable ({ providedIn : 'root' })
 export class LoginService {
 
   constructor(private http: Http) { }
