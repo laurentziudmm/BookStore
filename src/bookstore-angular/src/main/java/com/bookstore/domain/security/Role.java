@@ -24,7 +24,8 @@ public class Role implements Serializable {
     private final Set<UserRole> userRoles = new HashSet<>();
 
     //Constructor
-    public role () {}
+    public void role() {
+    }
 
     //Public Getter
     public int getRoleId() {
@@ -32,7 +33,7 @@ public class Role implements Serializable {
     }
 
     //Public Getter
-    public void setRoleId(int roleId) {
+    public void setRoleId(final int roleId) {
         this.roleId = roleId;
     }
 
@@ -40,15 +41,15 @@ public class Role implements Serializable {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
-    public Set<UserRole> getUserRoles() {
-		return userRoles;
-	}
+    public final Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
 
-    public void setUserRoles(Set<UserRole> userRoles) {
-		this.userRoles= userRoles;
+    public void setUserRoles(final Set<UserRole> userRoles) {
+		this.userRoles = userRoles;
 	}
 }
