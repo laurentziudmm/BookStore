@@ -45,11 +45,11 @@ public class Role implements Serializable {
         this.name = name;
     }
 
-    public final Set<UserRole> getUserRoles() {
+    public Set<UserRole> getUserRoles() {
         return userRoles;
     }
 
-    public void setUserRoles(final Set<UserRole> userRoles) {
+    public void setUserRoles(Set<UserRole> userRoles) {
 		this.userRoles = userRoles;
 	}
 }
