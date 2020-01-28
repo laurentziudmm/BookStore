@@ -32,7 +32,7 @@ public class User implements UserDetails, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "Id", nullable = false, updatable = false)
-    private long id;
+    private Long id; 
 
     private String username;
     private String password;
