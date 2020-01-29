@@ -36,8 +36,8 @@ public class User implements UserDetails, Serializable {
 
     private String username;
     private String password;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
 
     private String email;
     private String phone;
@@ -71,20 +71,20 @@ public class User implements UserDetails, Serializable {
         this.password = password;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -101,10 +101,6 @@ public class User implements UserDetails, Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public boolean isEnable() {
-        return enable;
     }
 
     public void setEnable(boolean enable) {
@@ -145,6 +141,6 @@ public class User implements UserDetails, Serializable {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return enable;
     }
 }
