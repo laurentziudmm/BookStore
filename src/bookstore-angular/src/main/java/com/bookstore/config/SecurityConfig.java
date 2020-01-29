@@ -17,9 +17,6 @@ import com.bookstore.service.*;
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
-    private Environment;
-
-    @Autowired
     private UserSecurityService userSecurityService;
 
     private BCryptPasswordEncoder passwordEncoder() {
